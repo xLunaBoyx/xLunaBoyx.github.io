@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하쿠메이와 미코치</title>
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <header>
+        <nav>
+            <ul class="navi">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_me.html">About Me</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="comics.html">Comics</a></li>
+                <!-- <li><a href="etc.html">ETC</a></li> -->
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="headerimgBox">
+        <!-- <img src="img/hakumiko1.jpg" id="headerimg3" alt="">
+        <img src="img/hakumiko2.jpg" id="headerimg4" alt=""> -->
+        <img src="img/hakumiko3.jpg" id="headerimg1" alt="">
+        <img src="img/hakumikologo.png" id="headerimg2" alt="">
+    </div>
+    <div class="container">
+        <article>
+            <h1>하쿠메이와 미코치</h1>
+            <p>
+                &nbsp;어른을 위한 동화책, 하쿠메이와 미코치이다. 신장이 9cm 정도인 요정들과 다양한 동물들이 함께 살아가는 세계관을 배경으로 이야기를 풀어내는데, 설정이 굉장히
+                매력적이다. 마냥 동화처럼 매일 노래부르고 춤추고 노는게 아니고, 현실세계처럼 먹고살기 위해 일을 하는 모습을 보여준다. 작중에 나오는 직업만 해도 짐꾼, 택시(?),
+                미용사, 석공, 재봉사, 요리사, 구멍가게 주인 등 매우 현실적이다. 물론 가희나 네크로맨서같은 판타지스러운 직업도 있다. 이 작품은 현실적인 면과 동화적인 면을
+                매우 적절히 조합하여서, 작중 인물들의 살아가는 모습을 보는 것 만으로도 입에 미소를 짓게 만든다. 
+            </p>
+            <br>
+            <div class="articleImgBox">
+                <img src="img/13.jpg" class="scale" width="700px;" alt="">
+                <p>🔼 작화가 매우 뛰어난 작품이다. 특히 동물 묘사는 정말 놀라울 수준.  </p>
+            </div>                
+            <p>
+                그리고 음식도 자주 나오는데, 작중의 요정들은 인간에 비해 매우 작기 때문에 커피콩 한개를 쪼개서 커피를 끓인다거나 쌀알 하나로 밥을 잔뜩 만든다거나 한다.
+                이런 묘사가 이 작품의 재미 중 하나이다. 그리고 무엇인지 알아볼 수는 없는 음식인 경우도 많은데, 이런 것들도 참 먹음직스러워 보인다. 
+        
+            </p>
+
+            <br><br><br>
+
+            <!-- <div class="videoBox">
+                <video muted autoplay loop>
+                    <source src="/choihyunggu/video/[mix]Sonic the Hedgehog 3 & Knuckles playthrough ~Longplay~.mp4" type="video/mp4">
+                </video>
+                <div class="sonicLogoBox fadein">
+                    <img src="/choihyunggu/img/sonic3.png" id="sonic3Logo" alt="" width="480px;">
+                </div>
+            </div>
+            <h2>소닉 더 헤지혹 3</h2>
+            <audio controls>
+                <source src="/choihyunggu/music/106 Angel Island.mp3" type="audio/mpeg">
+            </audio>
+            <p class="bgmText">&nbsp;&nbsp;&nbsp;BGM - 'Angel Island bgm'</p> -->
+
+        </article>
+        <footer>   <!-- 다른 페이지들은 footer를 container 밑에 뒀는데, 이 페이지는 처음 로드했을때 container를 diplay:none 해놨기때문에 footer가 위에 보이게 된다. 그래서 container에 넣었다. -->
+            <h3>LunaBoy's homepage project</h3>
+        </footer>
+    </div>
+    
+    <style>
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #555;
+    }
+    html, body {
+        margin: 0;
+    }
+    h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+    }
+    ul.navi {
+        display: flex;
+        justify-content: center;
+        /* position: fixed; */
+        margin: 0 0 8px 0;
+        top: 0;
+    }
+    .navi li {
+        z-index: 10;
+        list-style-type: none;
+        line-height: 52px;
+        transition-duration: .7s;
+    }
+    .navi li:hover {
+        background-color: white;
+    }
+    .navi li:hover a{
+        color: #555;
+    }
+    .navi li a {
+        color: white;
+        text-decoration-line: none;
+        padding: 16px;
+    }
+    .container {
+        /* display: flex; */
+        /* flex-direction: column; */
+        opacity: 0;
+        justify-content: space-around;
+        align-items: center;
+        line-height: 28px;
+        animation: fadeIn2 1s;
+        animation-delay: 1.9s;
+        animation-fill-mode: forwards;
+    }
+    article {
+        width: 800px;
+        height: 2000px;
+        border-radius: 20px;
+        margin: auto;
+        position: relative;
+        top: 24px;
+    }
+    #headerimgBox {
+        height: 700px;
+        /* background: rgb(100, 149, 237); */
+        background: yellowgreen;
+        margin-top: -8px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    #headerimg1 {
+        height: 700px;
+        position: relative;
+        opacity: 0;
+        animation: fadein 1.5s;
+        animation-delay: 0.1s;   /* 이 줄이 animation: 위에 가니까 적용이 안된다. animation 속성들끼리 쓰는 순서가 있는 듯 하다. */
+        animation-fill-mode: forwards;
+    }
+    #headerimg2 {
+        height: 250px;
+        left: 380px;
+        position: absolute;
+        opacity: 0;
+        animation: ytransform 1.5s;
+        animation-delay: 0.9s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadein {
+        from {
+            opacity:0;
+            top: -300px;
+        }
+        to {
+            opacity:1;
+            top: 0;
+        }
+    }
+    @keyframes ytransform {
+        from {
+            opacity:0;
+            top: -150px;
+        }
+        to {
+            opacity:1;
+            top: 35px;
+        }
+    }
+
+    @keyframes fadeIn2 {
+        from {
+            opacity:0;
+        }
+        to{
+            opacity:1;
+        }
+    }
+    .articleImgBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .bgmText {
+        font-size: .9em; 
+        color:rgb(110, 110, 110);
+    }
+    .scale {
+        transition-duration: .3s;
+    }
+    .scale:hover {
+        transform: scale(1.4);
+        border-radius: 20px;
+        box-shadow: 0px 0px 20px 5px gray;
+    }
+    .articleImgBox>p {
+        font-size: 0.8em;
+        color: #0066CC;
+    }
+    .videoBox {
+        width: 800px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .sonicLogoBox {
+        width: 800px;
+        height: 450px;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.45);   /* 그냥 opacity를 조절해버리면 박스 안의 요소들(여기서는 로그)도 적용되므로 rgba를 사용해야 한다. */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer {
+        background-color: lightgray;
+        text-align: center;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .fadein {
+        opacity:0;
+    }
+    
+    #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #1E4BC8; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    }
+
+    #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+    }
+    
+    </style>  
+    <script>
+    // 맨 위로 가기 버튼
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+
+    // 딱히 뭔가 하지 않아도 자동으로 실행되도록 한 함수들
+    $(document).ready(function() {
+        // 각 게임들 로고 스크롤하면 보이도록
+        $(window).scroll( function(){
+            $('.fadein').each( function(i){
+                var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+                var bottom_of_window = $(window).scrollTop() + $(window).height();
+                if(bottom_of_window > bottom_of_element + 100 ){   /* 스크롤 좀 더 했을때 보이게 하려면 어떻게 해야할까 하다가 100px 하면 안돼서 100 해보니까 의도한 대로 됐다. */
+                    $(this).animate({'opacity':'1'},1000);
+                }
+            }); 
+        });
+
+
+        // headerimg 3456을 순차적으로 나오게 하고 사라지게 만들기. 진짜 이거 구현한 게 너무너무 기쁘다. 얼마나 찾아보고 시간이 걸렸는지... 
+        // 그런데 브라우저 창 작게 하면 안맞는다.
+        const style1 = {
+            opacity: 1,
+            top: "80px"
+        }
+        const style2 = {
+            top: 0
+        }
+        const style3 = {
+            opacity: 0
+        }
+        const style4 = {
+            opacity: 1,
+            top: "130px"
+        }
+        const style5 = {
+            top: "70px"
+        }
+
+        // 소닉매니아 배경. 헤더이미지 3456 각자 등장하는 시간과 사라지는 시간 맞추는데 오래 걸렸다.
+        $(headerimg3).delay(600).animate(style1, 500, () => {   
+            $(headerimg3).animate(style2, 150, () => {   
+                $(headerimg3).delay(3500).animate(style3, 700);
+            })    
+        })
+
+
+
+        // 헤더이미지 다 나오고 나서 본문이 슬라이드다운
+        $(".container").delay(3000).animiate(style3, 2000);
+
+    });
+
+
+    // 본문 삽입 이미지들 호버시 살짝 커졌다가 원래 크기로 (안된다. animate()로는 scale을 먹일 수 없나?)
+    // $scale = $(".scale");
+    // $scale.hover(e => {
+    //     $scale.animate({transform: "scale(1.2)"}, 3000, () => {
+    //         $scale.animate({transform: "scale(1)"}, 3000)
+    //     });
+    // });
+
+
+    // 오디오 태그 하나 재생하면 다른것들은 정지하게 만들기
+    // audio태그를 작동시킬 때 뭐라고 써야할지부터 찾아야했고(.change 안됨, .play 안됨. on("play" 하니까 된다)), 지금 조작한 audio태그 외의 것들을 어떻게 조작할지도 찾느라 힘들었다.
+    // :not 선택자, $().prop 등 온갖 방법 다 시도해보다가 성공한 방법이 아래의 코드. 매우 간단했다...
+    $("audio").on("play", e => {
+        $("audio").each((index, elem) => {
+            if(elem != e.target)
+                elem.pause();   // .play(): 미디어 파일 재생, .pause(): 미디어 파일 일시정지
+        });
+    });
+    </script>  
+</body>
+</html>

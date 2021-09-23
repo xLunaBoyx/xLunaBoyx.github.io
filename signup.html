@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navi">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_me.html">About Me</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="comics.html">Comics</a></li>
+                <!-- <li><a href="etc.html">ETC</a></li> -->
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section>
+            <!-- 회원가입 폼 -->
+            <form action="javascript:saveMember();" name="memberFrm">
+                <table class="enroll">
+                    <tr>
+                        <th>아이디<span class="req"><!-- * --></span></th>
+                        <td>
+                            <input type="text" name="userId" id="userId" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>비밀번호<span class="req"><!-- * --></span></th>
+                        <td>
+                            <input type="password" name="pwd" id="pwd" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>비밀번호확인</th>
+                        <td>
+                            <input type="password" id="pwdCheck">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>이름<span class="req"><!-- * --></span></th>
+                        <td>
+                            <input type="text" name="userName" id="userName" > 
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>주민번호<span class="req"><!-- * --></span></th>
+                        <td>
+                            <input type="text" name="ssn1" id="ssn1" class="short" >-
+                            <input type="password" name="ssn2" id="ssn2" class="short" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>이메일<span class="req"><!-- * --></span></th>
+                        <td>
+                            <input type="email" name="email" id="email" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>전화번호<span class="req"><!-- * --></span></th>
+                        <td>
+                            <input type="text" name="tel1" id="tel1" class="phone" >-
+                            <input type="text" name="tel2" id="tel2" class="phone" >-
+                            <input type="text" name="tel3" id="tel3" class="phone" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>직업</th>
+                        <td>
+                            <select name="job" id="job">
+                                <option value="공무원">공무원</option>
+                                <option value="개발자" selected>개발자</option>
+                                <option value="무직">무직</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>취미</th>
+                        <td>
+                            <input type="checkbox" name="hobby" id="hobby1" value="reading">
+                            <label for="hobby1">독서</label>
+                            <input type="checkbox" name="hobby" id="hobby2" value="development">
+                            <label for="hobby2">개발</label>
+                            <input type="checkbox" name="hobby" id="hobby3" value="exercise">
+                            <label for="hobby3">운동</label>
+                            <input type="checkbox" name="hobby" id="hobby4" value="game">
+                            <label for="hobby4">게임</label>
+                            <input type="checkbox" name="hobby" id="hobby5" value="movie">
+                            <label for="hobby5">영화</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="btn-wrapper">
+                            <input type="submit" value="제출">&nbsp;
+                            <input type="reset" value="초기화">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <!-- 로그인 폼 -->
+            <form action="javascript:login();">
+                <table class="enroll" id="loginFrm">
+                    <tr>
+                        <th>아이디<span class="req"></span></th>
+                        <td>
+                            <input type="text" name="userId" id="loginId" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>비밀번호<span class="req"></span></th>
+                        <td>
+                            <input type="password" name="pwd" id="loginpwd" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="btn-wrapper">
+                            <input type="submit" value="로그인">&nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </div>
+    <footer>
+        <h3>LunaBoy's homepage project</h3>
+    </footer>
+    
+<style>
+    header {
+        /* position: sticky; */
+        /* top: 0; */
+        background-color: #555;
+    }
+    html, body {
+        margin: 0;
+    }
+    body {
+        background-image: url(img/signup_back.gif);
+        background-size: contain;
+    }
+    h1 {
+        font-family: "8BIT WONDER Nominal";
+        font-size: 2.5em;
+        text-align: center;
+    }
+    h3 {
+        margin: 0 auto;
+    }
+    ul.navi {
+        
+        display: flex;
+        justify-content: center;
+        /* position: fixed; */
+        margin: 0 auto;
+        top: 0;
+    }
+    .navi li {
+        z-index: 10;
+        list-style-type: none;
+        line-height: 52px;
+        transition-duration: .7s;
+    }
+    .navi li:hover {
+        background-color: white;
+    }
+    .navi li:hover a{
+        color: #555;
+    }
+    .navi li a {
+        color: white;
+        text-decoration-line: none;
+        padding: 16px;
+    }
+    .container {
+        position: relative;
+        height: 958px;
+        background-color: rgba(255, 255, 255, 0.233);
+        opacity: 0;
+        /* top: -200px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        line-height: 28px; */
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 958px;
+        position: relative;
+    }
+    table.enroll{
+        background-color: rgba(255, 255, 255, 0.829);
+        border: 1px solid;
+        border-spacing:10px;
+        border-radius: 30px;
+        width: 470px;
+        height: 600px;
+        margin: auto 50px;
+    }
+    table.enroll th{
+        text-align:right;
+    }
+    table.enroll td.btn-wrapper{
+        text-align: center;
+    }
+    #loginFrm {
+        width: 350px;
+        height: 200px;
+    }
+    .phone {
+        width:30px;
+    }
+    span.req{
+        color:red;
+    }
+    .short{
+        width:50px;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+        text-align: center;
+        height: 70px;
+        /* bottom: -16px; */
+        /* bottom: -32px; */
+        position: relative;
+    }
+</style>  
+<script>
+// 딱히 뭔가 하지 않아도 자동으로 실행되도록 한 함수들
+
+// 폼이 1초 후 faid in
+$(document).ready(function() {
+    $(".container").delay(900).animate({opacity: 1}, 800);
+});
+
+
+
+// 생성자 함수
+function MemberEntry(userId, pwd, userName, email) {
+    this.userId = userId;
+    this.pwd = pwd;
+    this.userName = userName;
+    this.email = email;
+    this.datetime = Date.now();
+}
+
+// 회원가입 메소드
+const saveMember = () => {
+    const member = new MemberEntry(userId.value, pwd.value, userName.value, email.value);
+    const members = JSON.parse(localStorage.getItem('members')) || [];
+    members.push(member);
+
+    localStorage.setItem('members', JSON.stringify(members));
+
+    alert(`${userId.value}님, 회원가입해 주셔서 감사합니다!`);
+
+    /* 폼 초기화. 이걸 alert 위에 놓으면 userId.value를 ''(없음)으로 인식한다. */
+    document.memberFrm.reset();
+}
+
+// 로그인 메소드
+const login = () => {
+    // console.log(loginId.value, loginpwd.value, localStorage.getItem(loginId.value));
+    const members = JSON.parse(localStorage.getItem('members'));
+    const id = loginId.value;
+    const pwd = loginpwd.value;
+
+    $(members).each((index, item) => {
+        // console.log(item.userId, item.pwd);
+        if(item.userId == id) {
+            // console.log(item.userId);
+            if(item.pwd == pwd) {
+                // console.log(item.pwd);
+                alert(`${id}님, 돌아오신 것을 환영합니다!`);
+
+                // 로그인 폼은 초기화가 안된다. 왜지? if 안에 들어가면 안되는건가?
+                loginFrm.reset();
+            }
+        }
+    });
+}
+
+
+
+document.memberFrm.onsubmit = function(){
+        //1.아이디검사
+        //첫글자는 반드시 영소문자로 이루어지고, 
+        //숫자가 하나이상 포함되어야함.
+        //아이디의 길이는 4~12글자사이
+        // if(!/^[a-z][0-9a-z]{3,11}$/.test(userId.value) || !/\d/.test(userId.value))   // 한번에 다 적기
+        if(!/^.{4,12}$/.test(userId.value)) { 
+            alert("4 ~ 12글자로 입력해주세요.");
+            return false;
+        }
+        else if(!/^[a-z]/.test(userId.value)) {
+            alert("영소문자로 시작해야 합니다.");
+            return false;
+        }
+        else if(!/\d/.test(userId.value)) {
+            alert("숫자가 하나 이상 포함되어야 합니다.");
+            return false;
+        }
+
+
+        //2.비밀번호 확인 검사
+        //숫자/문자/특수문자 포함 형태의 8~15자리 이내의 암호 정규식 
+        // if(!/[a-z]/.test(pwd.value) || !/\d/.test(pwd.value) || !/[*!&@]/.test(pwd.value) || !/^.{8,15}$/.test(pwd.value))
+        if(!/^.{8,15}$/.test(pwd.value)) {            
+            alert("8 ~ 15글자로 입력해주세요.")
+            return false;
+        }
+        else if(!/[a-zA-Z]/.test(pwd.value)) {
+            alert("영문자가 포함되어야 합니다.");
+            return false;
+        }
+        else if(!/\d/.test(pwd.value)) {
+            alert("숫자가 포함되어야 합니다.");
+            return false;
+        }
+        else if(!/[*!&@]/.test(pwd.value)) {
+            alert("특수문자가 포함되어야 합니다.");
+            return false;
+        }
+
+
+	    //비밀번호일치여부 검사
+        if(pwd.value !== pwdCheck.value) { 
+            alert("비밀번호 확인란을 다시 입력해주세요.")        
+            return false;
+        }
+
+
+        //3.이름검사 : 한글2글자 이상만 허용. 
+        if(!/^[가-힣]{2,}$/.test(userName.value)) {
+            alert("한글 2글자 이상으로 입력해주세요.")
+            return false;
+        }
+
+
+        //4.주민번호체크
+        // if(!/^\d{6}$/.test(ssn1.value)) {        // 밑의 조건 시작과 끝에 ^$ 붙여서 6자리 제한할 수 있을거라고 생각했는데, 붙이니까 제대로 썼는데도 문제있다고 나온다. 그래서 6자리 조건 따로 쓴건데 이틀 후 다시 해보니까 된다.
+        //     alert("숫자 6자리로 입력해 주세요.")        
+        //     return false;
+        // }
+        if(!/^\d{2}(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])$/.test(ssn1.value)) {   
+            alert("주민번호 앞자리 형식에 맞지 않습니다.");
+            return false;
+        }
+        
+        if(!/^\d{7}$/.test(ssn2.value)) {
+                alert("숫자 7자리로 입력해주세요.")
+                return false;
+        }
+        else if(!/[1234]\d{6}/.test(ssn2.value)) {
+            alert("주민번호 뒷자리 형식에 맞지 않습니다.");
+            return false;
+        }
+            
+        
+        //5.이메일 검사
+        if(!/[a-zA-z0-9]{4,12}@/.test(email.value)) {
+            alert("이메일 형식에 맞게 입력해주세요.")
+            return false;
+        }
+        
+
+        //6. 전화번호 검사
+        if(!/^010$/.test(tel1.value)) {
+            alert("010만 입력해주세요.")
+            return false;
+        }
+
+        if(!/^\d{3,}$/.test(tel2.value)) {
+            alert("숫자 3자리 이상 입력해주세요.")            
+            return false;
+        }
+        
+        if(!/^\d{4}$/.test(tel3.value)) {
+            alert("숫자 4자리로 입력해주세요.")    
+            return false;
+        }
+
+        return true;
+    }
+</script>  
+</body>
+</html>

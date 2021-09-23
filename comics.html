@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comics</title>
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <header>
+        <nav>
+            <ul class="navi">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_me.html">About Me</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="comics.html">Comics</a></li>
+                <!-- <li><a href="etc.html">ETC</a></li> -->
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <img src="img/game_backimg0.jpg" id="gameandwatch0" alt=""> -->
+    <div class="container">
+        <img src="img/bookshelf.jpg" id="bookshelf" alt="">
+        <section>
+            <article>
+                <a href="#">
+                    <img src="img/bridestory.png" class="book" id="bridestory" alt="">
+                </a>
+                <a href="hakumiko.html">
+                    <img src="img/hakumiko.jpg" class="book" id="hakumiko" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/fullmetal.jpg" class="book" id="fullmetal" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/highscore.jpg" class="book" id="highscore" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/bluegiant.jpg" class="book" id="bluegiant" alt="">
+                </a>
+                <a href="#">
+                    <img src="img/dungeonbob.jpg" class="book" id="dungeonbob" alt="">
+                </a>
+                <img src="img/bridestory.png" class="bigbook" id="bigbridestory" alt="">
+                <img src="img/hakumiko.jpg" class="bigbook" id="bighakumiko" alt="">
+                <img src="img/fullmetal.jpg" class="bigbook" id="bigfullmetal" alt="">
+                <img src="img/highscore.jpg" class="bigbook" id="bighighscore" alt="">
+                <img src="img/bluegiant.jpg" class="bigbook" id="bigbluegiant" alt="">
+                <img src="img/dungeonbob.jpg" class="bigbook" id="bigdungeonbob" alt="">
+
+                <div id="myword">
+                    <h1>Comics</h1>
+                    <p>
+                        &nbsp;게임과 마찬가지로, 만화 또한 어릴때부터 계속해 온 취미이다. 이야기를 감상하는 데에 있어서 게임과 더불어 가장 좋아하는 방식이 만화이다.
+                        그림, 말풍선, 대사, 컷배치 등 만화를 구성하는 많은 요소들이 어떻게 활용되느냐에 따라서 완전히 다른 체험을 할 수 있고, 내가 원하는 속도로 감상할 수 있다는 
+                        점도 큰 장점이다. 또한 만화책을 수집하는 재미도 있다. 학창시절에는 대여점에서 빌려봤지만 20살 즈음 부터는 많이 좋아하는 작품들은 직접 구입해서 소장하고
+                        있다. 여기에서는 내가 좋아하는 작품들 중 일부를 소개한다.
+                    </p>
+                    <p>(클릭하면 사라집니다)</p>
+                </div>
+                
+                <div id="infobox">
+                    <img src="img/pinnedpaper.png" alt="">
+                </div>
+                <div class="info" id="infobridestory">
+                    <h4>신부 이야기</h4>
+                    <p> 
+                        19세기 후반의 중앙아시아에서 완벽한 신부 아미르와 그 주변인물들이 때로는 즐겁게, 때로는 힘겹게 살아가는 이야기.
+                    </p>
+                </div>
+                <div class="info" id="infohakumiko">
+                    <h4>하쿠메이와 미코치</h4>
+                    <p> 
+                        요정과 동물들이 함께 일하고, 밥먹고, 때로는 술 한잔 하며 살아가는 동화같은 이야기.
+                    </p>
+                </div>
+                <div class="info" id="infofullmetal">
+                    <h4>강철의 연금술사</h4>
+                    <p> 
+                        금기를 저지른 대가로 신체의 일부를 잃어버린 형제는 몸을 되찾기 위해 긴 모험에 나선다. 
+                    </p>
+                </div>
+                <div class="info" id="infohighscore">
+                    <h4>하이스코어 걸</h4>
+                    <p> 
+                        오락실과 불량과자가 한창이던 시절, 격투게임에 진심인 소년과 소녀의 인연이 시작된다.
+                    </p>
+                </div>
+                <div class="info" id="infobluegiant">
+                    <h4>블루 자이언트</h4>
+                    <p> 
+                       우연히 재즈 콘서트를 보게 된 중학생 미야모토 다이가 세계 최고의 색소폰 연주자가 되기 위해 노력하는 이야기.
+                    </p>
+                </div>
+                <div class="info" id="infodungeonbob">
+                    <h4>던전밥</h4>
+                    <p> 
+                        클래식한 던전 탐험과 먹음직스러운 먹방, 그리고 탄탄한 스토리까지 겸비한 완성도 높은 작품.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </div>
+    <footer>
+        <h3>LunaBoy's homepage project</h3>
+    </footer>
+    
+<style>
+    header {
+        /* position: sticky; */
+        /* top: 0; */
+        background-color: #555;
+    }
+    html, body {
+        margin: 0;
+    }
+    body {
+        background-color: #A06509;
+    }
+    h1 {
+        font-size: 2.5em;
+        text-align: center;
+        margin-top: 20px;
+    }
+    h3 {
+        margin: 0 auto;
+    }
+    ul.navi {
+        display: flex;
+        justify-content: center;
+        /* position: fixed; */
+        margin: 0 auto;
+        top: 0;
+    }
+    .navi li {
+        z-index: 10;
+        list-style-type: none;
+        line-height: 52px;
+        transition-duration: .7s;
+    }
+    .navi li:hover {
+        background-color: white;
+    }
+    .navi li:hover a{
+        color: #555;
+    }
+    .navi li a {
+        color: white;
+        text-decoration-line: none;
+        padding: 16px;
+    }
+    .container {
+        position: relative;
+        overflow: hidden;
+        height: 958px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        line-height: 28px;
+    }
+    section {
+        width: 570px;
+        height: 405px;
+        position: absolute;
+    }
+    article {
+        width: 510px;
+        border-radius: 20px;
+        left: 38px;
+        position: absolute;
+        top: -50px;
+    }
+    #infobox {
+        opacity: 0;
+        position: relative;
+        width: 190px;
+        height: 200px;
+        top: -207px;
+        left: 162px;
+    }
+    #infobox img {
+        position: absolute;
+        width: 188px;
+    }
+    .info {
+        opacity: 0;
+        position: absolute;
+        width: 153px;
+        height: 200px;
+        top: -148px;
+        left: 180px;
+    }
+    .info h4 {
+        margin: -10px;
+        text-align: center;
+    }
+    .info p {
+        font-size: .8em;
+        line-height: 165%;
+    }
+    #myword {
+        width: 415px;
+        height: 400px;
+        background-color: rgb(255, 255, 255, 0.7);
+        position: relative;
+        top: -127px;
+        left: 20px;
+        color: black;
+        padding: 20px;
+        border: 3px solid darkgray;
+        border-radius: 30px;
+        opacity: 0;
+    }
+    #myword :nth-child(3) {
+        font-size: .9em;
+        color: rgb(85, 85, 85);
+        text-align: center;
+    }
+    #bookshelf {
+        opacity: 0;
+        position: absolute;
+        width: 1920px;
+    }
+    .book {
+        position: absolute;
+        height: 180px;
+        border: 1px solid rgb(32, 32, 32);
+        box-shadow: 8px -5px 12px #111111;
+        opacity: 0;
+    }
+    .bigbook {
+        position: absolute;
+        height: 600px;
+        top: -80px;
+        left: 36px;
+        border: 1px solid rgb(32, 32, 32);
+        box-shadow: 28px -20px 21px -5px #111111;
+        opacity: 0;
+    }
+    #hakumiko {
+        top: -180px;
+        left: -400px;
+    }
+    #bridestory {
+        top: -180px;
+        right: -400px;
+    }
+    #highscore {
+        top: 45px;
+        left: -400px;
+    }
+    #dungeonbob {
+        top: 45px;
+        right: -400px;
+    }
+    #fullmetal {
+        top: 268px;
+        left: -400px;
+    }
+    #bluegiant {
+        top: 268px;
+        right: -400px;
+    }
+    .icon {
+        position: relative;
+        border-radius: 10px;
+        border: 5px solid #C98C10;
+        padding: 5px;
+        transition-duration: .5s;
+    }
+    .icon:hover {
+        transform: translateY(-20px);
+        background-color: black;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+        text-align: center;
+        height: 70px;
+        /* bottom: -16px; */
+        /* bottom: -32px; */
+        position: relative;
+    }
+    
+    #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #1E4BC8; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    }
+
+    #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+    }
+    
+</style>  
+<script>
+// 맨 위로 가기 버튼
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
+// 딱히 뭔가 하지 않아도 자동으로 실행되도록 한 함수들
+$(document).ready(function() {
+    $(bookshelf).delay(100).animate({opacity: 1}, 500);
+    const style1 = {
+        top: "-120px",
+        opacity: 1
+    }
+    const style2 = {
+        top: "105px",
+        opacity: 1
+    }
+    const style3 = {
+        top: "328px",
+        opacity: 1
+    }
+    $(hakumiko).delay(1000).animate(style1, 800);
+    $(highscore).delay(1400).animate(style2, 800);
+    $(fullmetal).delay(1800).animate(style3, 800);
+    $(bridestory).delay(2200).animate(style1, 800);
+    $(dungeonbob).delay(2600).animate(style2, 800);
+    $(bluegiant).delay(3000).animate(style3, 800);
+
+    $(myword).delay(3500).animate({top: '-67px', opacity: 1}, 800);
+    $(myword).click(e => {
+        $(myword).fadeOut(500);
+    })
+
+});
+
+const style4 = {
+    top: "20px",
+    opacity: 1
+}
+const style5 = {
+    top: "-80px",
+    opacity: 0
+}
+
+// 진열된 책에 마우스 올리면 책이 조금 올라가고 중앙에 큰 이미지가 내려오면서 fadein, 그게 끝나면 작품설명 메모가 fadein. 마우스 치우면 중앙 이미지와 작품설명 메모 동시에 fadeout (animate() 안에서 함수가 나오면 이거 끝나고 안의 함수 실행이다.)
+// 중앙 이미지 나온 후 작품설명 나오게 하니까 마우스가 아주 짧은 시간동안 스쳐 지나가면 뭔가 오류가 나서 그냥 동시에 나오도록 수정
+// 중앙 이미지 나오게 하는 animate 안에 작품설명 animate 넣지 않고 그냥 딜레이를 줬다.
+$(hakumiko).hover(
+    e => {
+        $(hakumiko).animate({top: "-140px"}, 150);
+        $(bighakumiko).animate(style4, 500);
+        $(infobox).delay(400).animate({opacity: 1}, 300);
+        $(infohakumiko).delay(400).animate({opacity: 1}, 300);
+    },
+    e => {
+        $(hakumiko).animate({top: "-120px"}, 150);
+        $(bighakumiko).animate(style5, 500);
+        $(infobox).animate({opacity: 0}, 300);
+        $(infohakumiko).animate({opacity: 0}, 300);
+});
+$(highscore).hover(
+    e => {
+        $(highscore).animate({top: "85px"}, 150);
+        $(bighighscore).animate(style4, 500);
+        $(infobox).delay(400).animate({opacity: 1}, 300);
+        $(infohighscore).delay(400).animate({opacity: 1}, 300);
+    },
+    e => {
+        $(highscore).animate({top: "105px"}, 150);
+        $(bighighscore).animate(style5, 500);
+        $(infobox).animate({opacity: 0}, 300);
+        $(infohighscore).animate({opacity: 0}, 300);
+});
+$(fullmetal).hover(
+    e => {
+        $(fullmetal).animate({top: "308px"}, 150);
+        $(bigfullmetal).animate(style4, 500);
+        $(infobox).delay(400).animate({opacity: 1}, 300);
+        $(infofullmetal).delay(400).animate({opacity: 1}, 300);
+    },
+    e => {
+        $(fullmetal).animate({top: "328px"}, 150);
+        $(bigfullmetal).animate(style5, 500);
+        $(infobox).animate({opacity: 0}, 300);
+        $(infofullmetal).animate({opacity: 0}, 300);
+});
+$(bridestory).hover(
+    e => {
+        $(bridestory).animate({top: "-140px"}, 150);
+        $(bigbridestory).animate(style4, 500);
+        $(infobox).delay(400).animate({opacity: 1}, 300);
+        $(infobridestory).delay(400).animate({opacity: 1}, 300);
+    },
+    e => {
+        $(bridestory).animate({top: "-120px"}, 150);
+        $(bigbridestory).animate(style5, 500);
+        $(infobox).animate({opacity: 0}, 300);
+        $(infobridestory).animate({opacity: 0}, 300);
+});
+$(dungeonbob).hover(
+    e => {
+        $(dungeonbob).animate({top: "85px"}, 150);
+        $(bigdungeonbob).animate(style4, 500);
+        $(infobox).delay(400).animate({opacity: 1}, 300);
+        $(infodungeonbob).delay(400).animate({opacity: 1}, 300);
+    },
+    e => {
+        $(dungeonbob).animate({top: "105px"}, 150);
+        $(bigdungeonbob).animate(style5, 500);
+        $(infobox).animate({opacity: 0}, 300);
+        $(infodungeonbob).animate({opacity: 0}, 300);
+});
+$(bluegiant).hover(
+    e => {
+    // 수정 전 방식
+    //     $(bluegiant).animate({top: "308px"}, 150);
+    //     $(bigbluegiant).animate(style4, 500, function() {
+    //         $(infobox).animate({opacity: 1}, 300);
+    //         $(infobluegiant).animate({opacity: 1}, 300)
+    //     });
+        $(bluegiant).animate({top: "308px"}, 150);
+        $(bigbluegiant).animate(style4, 500);
+        $(infobox).delay(400).animate({opacity: 1}, 300);
+        $(infobluegiant).delay(400).animate({opacity: 1}, 300);
+    },
+    e => {
+        $(bluegiant).animate({top: "328px"}, 150);
+        $(bigbluegiant).animate(style5, 500);
+        $(infobox).animate({opacity: 0}, 300);
+        $(infobluegiant).animate({opacity: 0}, 300);
+});
+
+</script>  
+</body>
+</html>

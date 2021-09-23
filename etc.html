@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETC</title>
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <header>
+        <nav>
+            <ul class="navi">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_me.html">About Me</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="comics.html">Comics</a></li>
+                <!-- <li><a href="etc.html">ETC</a></li> -->
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="headerimgBox">
+        
+    </div>
+    <div class="container">
+        <article>
+            
+        </article>
+    </div>
+    <footer>
+        <h3>LunaBoy's homepage project</h3>
+    </footer>
+    
+<style>
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background-color: #555;
+    }
+    html, body {
+        margin: 0;
+    }
+    h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+    }
+    h3 {
+        line-height: 100px;
+    }
+    ul.navi {
+        display: flex;
+        justify-content: center;
+        /* position: fixed; */
+        margin: 0 0 8px 0;
+        top: 0;
+    }
+    .navi li {
+        list-style-type: none;
+        padding: 0 20px 0 20px;
+        line-height: 52px;
+        transition-duration: .7s;
+    }
+    .navi li:hover {
+        background-color: white;
+    }
+    .navi li:hover a{
+        color: #555;
+    }
+    .navi li a {
+        color: white;
+        text-decoration-line: none;
+    }
+    .container {
+        /* display: flex; */
+        /* flex-direction: column; */
+        height:10px;
+        justify-content: space-around;
+        align-items: center;
+        line-height: 28px;
+    }
+    article {
+        width: 800px;
+        height:10px;
+        border-radius: 20px;
+        margin: auto;
+        position: relative;
+        top: 24px;
+    }
+    #headerimgBox {
+        height: 700px;
+        /* background: rgb(100, 149, 237); */
+        background: linear-gradient(180deg, rgb(41, 111, 241) 0%, rgba(255,255,255,1) 100%);
+        margin-top: -8px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    /* #doublesonic {
+        height: 700px;
+        position: relative;
+        animation: fadein 1.5s;
+        -moz-animation: fadein 2s; 
+        -webkit-animation: fadein 2s; 
+        -o-animation: fadein 2s; 
+    }  */
+    #headerimg1 {
+        height: 700px;
+        position: relative;
+        opacity: 0;
+        animation: fadein 1.5s;
+        animation-delay: 5.1s;   /* 이 줄이 animation: 위에 가니까 적용이 안된다. animation 속성들끼리 쓰는 순서가 있는 듯 하다. */
+        animation-fill-mode: forwards;
+        /* -moz-animation: fadein 1.5s; 
+        -webkit-animation: fadein 1.5s; 
+        -o-animation: fadein 1.5s;  */
+    }
+    #headerimg2 {
+        width: 580px;
+        position: absolute;
+        opacity: 0;
+        animation: ytransform 1s;
+        animation-delay: 6.1s;
+        animation-fill-mode: forwards;
+    }
+    @keyframes fadein {
+        from {
+            opacity:0;
+            top: -300px;
+        }
+        to {
+            opacity:1;
+            top: 0;
+        }
+    }
+    @keyframes ytransform {
+        from {
+            opacity:0;
+            top: 200px;
+        }
+        to {
+            opacity:1;
+            top: 445px;
+        }
+    }
+    #headerimg3 {
+        position: absolute;
+        top: -600px;
+        height: 600px;
+        z-index: 0;
+        /* animation: fadein 1s; */
+        animation-delay: .4s;
+        animation-fill-mode: forwards;
+    }
+    #headerimg4 {
+        position: absolute;
+        opacity: 0;
+        top: -100px;
+        height: 450px;
+        left: 770px;
+        z-index: 2;
+        /* right: 0px; */
+        /* animation: fadein 1s; */
+        animation-delay: 1.4s;
+        animation-fill-mode: forwards;
+    }
+    #headerimg5 {
+        position: absolute;
+        opacity: 0;
+        top: -100px;
+        height: 400px;
+        right: 580px;
+        z-index: 1;
+        /* animation: fadein 1s; */
+        animation-delay: 2.4s;
+        animation-fill-mode: forwards;
+    }
+    #headerimg6 {
+        position: absolute;
+        opacity: 0;
+        top: -100px;
+        height: 410px;
+        left: 600px;
+        z-index: 1 ;
+        /* animation: fadein 1s; */
+        animation-delay: 3.4s;
+        animation-fill-mode: forwards;
+    }
+
+    /* 소닉 IDW코믹스에서 가져온 그림들 3개를 썼었다가 소닉매니아 그림으로 바꿨음 */
+    /* #headerimg3 {
+        position: absolute;
+        opacity: 0;
+        top: -300px;
+        left: 0px;
+        animation-delay: .4s;
+        animation-fill-mode: forwards;
+    }
+    #headerimg4 {
+        position: absolute;
+        opacity: 0;
+        top: -300px;
+        right: 0px;
+        animation-delay: 2.4s;
+        animation-fill-mode: forwards;
+    }
+    #headerimg5 {
+        position: absolute;
+        opacity: 0;
+        top: -300px;
+        margin: auto;
+        animation-delay: 1.4s;
+        animation-fill-mode: forwards;
+    } */
+    @keyframes fadeOut {
+        from {
+            opacity:1;
+        }
+        to{
+            opacity:0;
+        }
+    }
+    .articleImgBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .bgmText {
+        font-size: .9em; 
+        color:rgb(110, 110, 110);
+    }
+    .scale {
+        transition-duration: .3s;
+    }
+    .scale:hover {
+        transform: scale(1.4);
+        border-radius: 20px;
+    }
+    .articleImgBox>p {
+        font-size: 0.8em;
+        color: #0066CC;
+    }
+    .sonicVideoBox {
+        width: 800px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    .sonicLogoBox {
+        width: 800px;
+        height: 450px;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.45);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer {
+        background-color: lightgray;
+        text-align: center;
+        height: 100px;
+    }
+    .fadein {
+        opacity:0;
+    }
+    
+    #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #1E4BC8; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    }
+
+    #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+    }
+    
+</style>  
+<script>
+// 맨 위로 가기 버튼
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
+// 딱히 뭔가 하지 않아도 자동으로 실행되도록 한 함수들
+$(document).ready(function() {
+    
+});
+
+</script>  
+</body>
+</html>

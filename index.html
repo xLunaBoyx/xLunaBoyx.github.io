@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    
+    <div class="menu aboutme">
+        <div class="menu back">
+            <img src="img/do-any-8-bit-figure.gif" alt="">
+            <div class="menu black"></div>
+        </div>
+        <a href="about_me.html">
+            <p class="bigText">About Me</p>
+        </a>
+    </div>
+    <div class="menu game">
+        <div class="menu back">
+            <video muted autoplay loop>
+                <source src="/choihyunggu/video/[mix]Super Mario Odyssey Trailer - Nintendo Switch.mp4" type="video/mp4">
+            </video>
+            <div class="menu black"></div>
+        </div>
+        <a href="game.html">
+            <p class="bigText">Game</p>
+        </a>
+    </div>
+    <div class="menu comics">
+        <div class="menu back">
+            <video muted autoplay loop>
+                <source src="/choihyunggu/video/[mix]【公式】漫画を＜紙＞で味わう至福がここに。～『乙嫁語り＜ワイド版＞ 1』～.mp4" type="video/mp4">
+            </video>
+            <div class="menu black"></div>
+        </div>
+        <a href="comics.html">
+            <p class="bigText">Comics</p>
+        </a>
+    </div>
+    <div class="menu signup">
+        <div class="menu back">
+            <img src="img/Darth_Vader_Uncle_Sam_Poster_by_FYREDesign.jpg" alt="">
+            <div class="menu black"></div>
+        </div>
+        <a href="signup.html">
+            <p class="bigText">Sign Up</p>
+        </a>
+    </div>
+    
+<style>
+    html, body {
+        margin: 0;
+    }
+    h1 {
+        font-family: "8BIT WONDER Nominal";
+        font-size: 2.5em;
+        text-align: center;
+    }
+    h3 {
+        margin: 0 auto;
+    }
+    .container {
+        position: relative;
+        width: 100%;   /* width를 %로 주는 것의 의미 : Defines the width as a percentage of the containing block's width. */
+        /* height: 958px; */
+        /* overflow: hidden; */
+        /* top: -200px; */
+        /* display: flex; */
+        /* flex-wrap: wrap; */
+        /* justify-content: center; */
+        /* flex-direction: column; */
+        /* align-items: center; */
+        /* line-height: 28px; */
+    }
+    section {
+        /* width: 570px; */
+        /* height: 405px; */
+        position: absolute;
+    }
+    article {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto; 
+        position: absolute;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* 화면 4분할 하는데 시간을 얼마나 잡아먹었는지... 간단한 거 같은데 안되더라
+    화면 정중앙에 가로세로 줄 넣어서 만든 4분할에서 세로4분할로 변경 */
+    /* 기존 4분할이었을때 */
+    /* .aboutme {
+        position: relative;
+        width: 50%;
+        height: 50vh;
+        left: 0;
+        top: 0;
+        background-color: antiquewhite;
+        float:left;
+    }
+    .game {
+        position: relative;
+        width: 50%;
+        height: 50vh;
+        background-color: #5380f3;
+        float:left;
+    }
+    .comics {
+        position: relative;
+        width: 50%;
+        height: 50vh;
+        background-color:darkorange;
+        float:left;
+    }
+    .signup {
+        position: relative;
+        width: 50%;
+        height: 50vh;
+        background-color:greenyellow;
+        float:left;
+    } */
+
+    .menu {
+        position: relative;
+        width: 25%;
+        height: 1079.9px;   /* 1080으로 하면 1도트 스크롤이 생긴다. 1079로 하면 1도트 빈틈이 생긴다. */
+        float:left;
+        top: -1080px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .menu a {
+        position: relative;
+        padding: 434px 80px;
+        text-decoration: none;
+    }
+    .back {
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+        transition-duration: 1s;
+    }
+    .black {
+        width: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.11);
+        top: 0;
+    }
+    .back video {
+        top: 0;
+        position: absolute;
+        height: 700px;
+        z-index: 1;
+    }
+    .back img {
+        position: absolute;
+        top: 250px;
+        width: 400px;
+    }
+    .menu:hover .bigText {
+        position: relative;
+        transform: translateY(350px);
+        color: white;
+        transition-duration: 1s;
+    }
+    .menu:hover .back {
+        transform: translateY(1080px);
+    }
+    .bigText {
+        font-size: 4em;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.3);
+        transition-duration: .5s;
+    }
+    .aboutme {
+        background-color: #05C7F2;
+    }
+    .game {
+        background-color: #A9BF04;
+    }
+    .comics {
+        background-color:#F2B705;
+    }
+    .signup {
+        background-color:#F27405;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+        text-align: center;
+        height: 70px;
+        position: relative;
+    }
+    
+</style>  
+<script>
+// 딱히 뭔가 하지 않아도 자동으로 실행되도록 한 함수들
+
+// 메뉴 4개가 순차적으로 내려오게 한다. 근데 이것들이 딴거 다 담고있는데, 왜 이게 내려왔는데 영상과 검은 필터 가진 div는 안 내려오는거지? 
+// 지금 의도대로 작동하는 상태인데, 왜 이러는지 모르겠다. jquery animate로 이동시키면 안에 든 것들 빼고 이동하나? 다 만들어놓고 다시 보니까 황당하네
+// .back은 .menu의 영향을 두번 받아서 시작할때 top: -2160px 에 가있는건가?
+$(document).ready(function() {
+    $(".aboutme").delay(400).animate({top:0}, 1000);
+    $(".game").delay(700).animate({top:0}, 1000);
+    $(".comics").delay(1000).animate({top:0}, 1000);
+    $(".signup").delay(1300).animate({top:0}, 1000);
+    // $(".black").animate({top: "2160px"}, 1000);    // black이 투명한것같다. ??
+});
+
+</script>  
+</body>
+</html>

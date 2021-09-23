@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <header>
+        <nav>
+            <ul class="navi">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_me.html">About Me</a></li>
+                <li><a href="game.html">Game</a></li>
+                <li><a href="comics.html">Comics</a></li>
+                <!-- <li><a href="etc.html">ETC</a></li> -->
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <img src="img/game_backimg0.jpg" id="gameandwatch0" alt=""> -->  <!-- 이렇게 두니까 브라우저 창 크기를 줄여도 이거 width는 1920px 고정이었다. 이 이미지를 body의 백그라운드이미지로 넣으니까 해결됐다. -->
+    <div class="container">
+        <img src="img/game_backimg.jpg" id="gameandwatch" alt="">
+        <section>
+            <article>
+                <h1>VIDEO GAME</h1>    
+                <p>&nbsp;나는 게임을 좋아한다. 너무 오래 전이라 기억이 확실하지는 않지만, 유치원 때부터 게임을 했다. 처음으로 한 게임은 슈퍼 마리오 브라더스1이었는데, tv 화면 안에
+                    있는 캐릭터가 내 조작에 맞춰서 움직이고, 버섯을 먹어서 덩치가 커지고, 적을 밟으면서 앞으로 나아가는 경험은 정말 환상적이었다. 그때부터 게임은 내가 가장 좋아하는 
+                    것이 되었고, 시간이 흐른 지금은 예전만큼은 아니지만 그래도 여전히 나의 가장 큰 관심사이다. 그래서 나의 게임 이야기를 조금 풀어보고자 한다.
+                </p>
+                <div id="game_icon_box">
+                    <a href="sonic.html" target="">
+                        <img src="img/asonic.gif" class="icon" id="sonicIcon" width="100px" title="소닉 더 헤지혹 시리즈" alt="">
+                    </a>
+                    <a href="#" target="">
+                        <img src="img/arockman.gif" class="icon" id="rockmanIcon" width="100px" title="록맨 시리즈" alt="">
+                    </a>
+                    <a href="#" target="">
+                        <img src="img/alink.gif" class="icon" id="zeldaIcon" width="100px" title="젤다의 전설 시리즈" alt="">
+                    </a>
+                    <a href="#" target="">
+                        <img src="img/amario.gif" class="icon" id="marioIcon" width="100px" title="그 외 게임들" alt="">
+                    </a>
+                </div>
+            </article>
+        </section>
+    </div>
+    <footer>
+        <h3>LunaBoy's homepage project</h3>
+    </footer>
+    
+<style>
+    header {
+        /* position: sticky; */
+        /* top: 0; */
+        background-color: #555;
+    }
+    html, body {
+        margin: 0;
+        background-image: url("img/game_backimg0.jpg");
+    }
+    h1 {
+        font-family: "8BIT WONDER Nominal";
+        font-size: 2.5em;
+        text-align: center;
+    }
+    h3 {
+        margin: 0 auto;
+    }
+    ul.navi {
+        display: flex;
+        justify-content: center;
+        /* position: fixed; */
+        margin: 0 auto;
+        top: 0;
+    }
+    .navi li {
+        z-index: 10;
+        list-style-type: none;
+        line-height: 52px;
+        transition-duration: .7s;
+    }
+    .navi li:hover {
+        background-color: white;
+    }
+    .navi li:hover a{
+        color: #555;
+    }
+    .navi li a {
+        color: white;
+        text-decoration-line: none;
+        padding: 16px;
+    }
+    .container0 {
+        position: relative;
+        opacity: 0;
+        overflow: hidden;
+        top: -200px;
+        height: 958px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        line-height: 28px;
+    }
+    .container {
+        position: relative;
+        opacity: 0;
+        overflow: hidden;
+        top: -200px;
+        height: 958px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        line-height: 28px;
+    }
+    section {
+        display: none;
+        width: 570px;
+        height: 405px;
+        background-color: rgba(0, 0, 0, 0.85);
+        position: absolute;
+    }
+    article {
+        display: none;
+        width: 510px;
+        border-radius: 20px;
+        left: 38px;
+        position: absolute;
+        /* background-color: black; */
+        color: white;
+        top: -50px;
+    }
+    #gameandwatch0 {
+        position: absolute;
+        width: 1920px;
+        height: 958px;
+    }
+    #gameandwatch {
+        position: absolute;
+        width: 1920px;
+    }
+    #game_icon_box {
+        display: flex;
+        justify-content: space-between;
+    }
+    .icon {
+        position: relative;
+        border-radius: 10px;
+        border: 5px solid #C98C10;
+        padding: 5px;
+        transition-duration: .5s;
+        filter: grayscale(100%);
+    }
+    .icon:hover {
+        transform: translateY(-20px);
+        background-color: black;
+        filter: none;
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+        text-align: center;
+        height: 70px;
+        /* bottom: -16px; */
+        /* bottom: -32px; */
+        position: relative;
+    }
+    .fadein {
+        opacity:0;
+    }
+    
+    #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #1E4BC8; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    }
+
+    #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+    }
+    
+</style>  
+<script>
+// 맨 위로 가기 버튼
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
+// 딱히 뭔가 하지 않아도 자동으로 실행되도록 한 함수들
+$(document).ready(function() {
+
+    // 게임&워치 배경그림이 왼쪽에서 나오면서 fadein
+    const style1 = {
+        opacity: 1,
+        top: 0
+    }
+    $(".container").delay(400).animate(style1, 900);
+
+    // 검은 배경이 화면 자리에 slideDown(슬라이드다운인데 화면 중앙부터 위아래로 펼쳐진다. 이게 내가 원하는 모양이긴 한데 왜 이렇게 되지?)
+    $("section").delay(1900).slideDown(1100, "linear");
+
+    // 텍스트가 show
+    $("article").delay(3000).show(3000);
+
+});
+
+</script>  
+</body>
+</html>
