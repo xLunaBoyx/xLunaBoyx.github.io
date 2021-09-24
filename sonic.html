@@ -22,11 +22,12 @@
         </nav>
     </header>
     <div id="headerimgBox">
-        <!-- <img src="img/sonic_generations_wallpaper.jpg" id="doublesonic" alt="doublesonic"> -->
-        <img src="img/sonicHeaderBackground.png" id="headerimg3" class="fadeOut" alt="">
-        <img src="img/sonic.png" class="fadeOut" id="headerimg4" class="fadeOut" alt="">
-        <img src="img/tails.png" class="fadeOut" id="headerimg5" class="fadeOut" alt="">
-        <img src="img/knuckles.png" class="fadeOut" id="headerimg6" class="fadeOut" alt="">
+        <!-- <img src="img/sonicHeaderBackground.png" id="headerimg3" class="fadeOut" alt=""> -->
+            <div id="headerimg3">
+                <img src="img/sonic.png" id="headerimg4" alt="">
+                <img src="img/tails.png" id="headerimg5" alt="">
+                <img src="img/knuckles.png" id="headerimg6" alt="">
+            </div>
         <!-- <img src="img/sonicHeaderImg (1).png" id="headerimg3" class="fadeOut" alt="">
         <img src="img/sonicHeaderImg (2).jpg" id="headerimg4" class="fadeOut" alt="">
         <img src="img/sonicHeaderImg (3).png" id="headerimg5" class="fadeOut" alt=""> -->
@@ -417,14 +418,6 @@
         display: flex;
         justify-content: center;
     }
-    /* #doublesonic {
-        height: 700px;
-        position: relative;
-        animation: fadein 1.5s;
-        -moz-animation: fadein 2s; 
-        -webkit-animation: fadein 2s; 
-        -o-animation: fadein 2s; 
-    }  */
     #headerimg1 {
         height: 700px;
         position: relative;
@@ -465,11 +458,13 @@
         }
     }
     #headerimg3 {
+        width: 1067px;
+        height: 600px;
+        background-image: url(img/sonicHeaderBackground.png);
+        background-size: contain;
         position: absolute;
         top: -600px;
-        height: 600px;
         z-index: 0;
-        /* animation: fadein 1s; */
         animation-delay: .4s;
         animation-fill-mode: forwards;
     }
@@ -478,10 +473,8 @@
         opacity: 0;
         top: -100px;
         height: 450px;
-        left: 770px;
+        left: 380px;
         z-index: 2;
-        /* right: 0px; */
-        /* animation: fadein 1s; */
         animation-delay: 1.4s;
         animation-fill-mode: forwards;
     }
@@ -490,9 +483,8 @@
         opacity: 0;
         top: -100px;
         height: 400px;
-        right: 580px;
+        left: 580px;
         z-index: 1;
-        /* animation: fadein 1s; */
         animation-delay: 2.4s;
         animation-fill-mode: forwards;
     }
@@ -501,9 +493,8 @@
         opacity: 0;
         top: -100px;
         height: 410px;
-        left: 590px;
+        left: 190px;
         z-index: 1 ;
-        /* animation: fadein 1s; */
         animation-delay: 3.4s;
         animation-fill-mode: forwards;
     }
@@ -651,6 +642,8 @@ $(document).ready(function() {
 
     // headerimg 3456을 순차적으로 나오게 하고 사라지게 만들기. 진짜 이거 구현한 게 너무너무 기쁘다. 얼마나 찾아보고 시간이 걸렸는지... 
     // 그런데 브라우저 창 작게 하면 안맞는다.
+    // 소닉매니아 배경과 소닉매니아 3인방을 형제요소로 두고 offset 맞추니까 브라우저 크기에 따라 3인방의 위치가 안맞았는데,
+    // div를 새로 만들어서 그 배경이미지를 소닉매니아 배경으로 하고 3인방을 div에 넣어서 offset 맞추니까 브라우저 작아져도 맞는다. 나이스
     const style1 = {
         opacity: 1,
         top: "80px"
@@ -699,7 +692,7 @@ $(document).ready(function() {
 
 
     // 헤더이미지 다 나오고 나서 본문이 슬라이드다운
-    $(".container").delay(6800).slideDown(2000);
+    $(".container").delay(6800).slideDown(4000);
 
 });
 

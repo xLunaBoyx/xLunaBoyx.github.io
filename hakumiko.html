@@ -118,7 +118,7 @@
         align-items: center;
         line-height: 28px;
         animation: fadeIn2 1s;
-        animation-delay: 1.9s;
+        animation-delay: 2.4s;
         animation-fill-mode: forwards;
     }
     article {
@@ -143,7 +143,7 @@
         position: relative;
         opacity: 0;
         animation: fadein 1.5s;
-        animation-delay: 0.1s;   /* 이 줄이 animation: 위에 가니까 적용이 안된다. animation 속성들끼리 쓰는 순서가 있는 듯 하다. */
+        animation-delay: 0.3s;   /* 이 줄이 animation: 위에 가니까 적용이 안된다. animation 속성들끼리 쓰는 순서가 있는 듯 하다. */
         animation-fill-mode: forwards;
     }
     #headerimg2 {
@@ -152,7 +152,7 @@
         position: absolute;
         opacity: 0;
         animation: ytransform 1.5s;
-        animation-delay: 0.9s;
+        animation-delay: 1.1s;
         animation-fill-mode: forwards;
     }
     @keyframes fadein {
@@ -172,7 +172,7 @@
         }
         to {
             opacity:1;
-            top: 35px;
+            top: 70px;
         }
     }
 
@@ -280,61 +280,22 @@
 
     // 딱히 뭔가 하지 않아도 자동으로 실행되도록 한 함수들
     $(document).ready(function() {
-        // 각 게임들 로고 스크롤하면 보이도록
-        $(window).scroll( function(){
-            $('.fadein').each( function(i){
-                var bottom_of_element = $(this).offset().top + $(this).outerHeight();
-                var bottom_of_window = $(window).scrollTop() + $(window).height();
-                if(bottom_of_window > bottom_of_element + 100 ){   /* 스크롤 좀 더 했을때 보이게 하려면 어떻게 해야할까 하다가 100px 하면 안돼서 100 해보니까 의도한 대로 됐다. */
-                    $(this).animate({'opacity':'1'},1000);
-                }
-            }); 
-        });
 
-
-        // headerimg 3456을 순차적으로 나오게 하고 사라지게 만들기. 진짜 이거 구현한 게 너무너무 기쁘다. 얼마나 찾아보고 시간이 걸렸는지... 
-        // 그런데 브라우저 창 작게 하면 안맞는다.
-        const style1 = {
-            opacity: 1,
-            top: "80px"
-        }
-        const style2 = {
-            top: 0
-        }
-        const style3 = {
-            opacity: 0
-        }
-        const style4 = {
-            opacity: 1,
-            top: "130px"
-        }
-        const style5 = {
-            top: "70px"
-        }
-
-        // 소닉매니아 배경. 헤더이미지 3456 각자 등장하는 시간과 사라지는 시간 맞추는데 오래 걸렸다.
-        $(headerimg3).delay(600).animate(style1, 500, () => {   
-            $(headerimg3).animate(style2, 150, () => {   
-                $(headerimg3).delay(3500).animate(style3, 700);
-            })    
-        })
-
-
-
-        // 헤더이미지 다 나오고 나서 본문이 슬라이드다운
-        $(".container").delay(3000).animiate(style3, 2000);
-
+         // css로 했던 헤더이미지들 fadein+y축 이동을 jquery로 해봤는데 움직임이 다르다. css로 한 게 시작점과 종결점 속도차가 눈에 띄게 차이남.
+        // jquery는 linear 버그난 줄 알았는데 linear 진짜 줘보니까 버그 아니었음. css에 비하면 linear스럽다.
+        // 헤더이미지에 넣을 효과로는 css로 한 게 더 마음에 들어서 일단 복구하고, 작업한 건 여기에 남겨뒀다. 이걸로 하려면 style에서 아래 3객체 수정해야한다.
+        // const style1 = {
+        //     opacity: 1,
+        //     top: 0
+        // }
+        // const style2 = {
+        //     opacity: 1,
+        //     top: "70px"
+        // }
+        // $(headerimg1).delay(200).animate(style1, 1300);
+        // $(headerimg2).delay(1200).animate(style2, 1100);
+        // $(".container").delay(2200).animate({opacity: 1}, 1500);
     });
-
-
-    // 본문 삽입 이미지들 호버시 살짝 커졌다가 원래 크기로 (안된다. animate()로는 scale을 먹일 수 없나?)
-    // $scale = $(".scale");
-    // $scale.hover(e => {
-    //     $scale.animate({transform: "scale(1.2)"}, 3000, () => {
-    //         $scale.animate({transform: "scale(1)"}, 3000)
-    //     });
-    // });
-
 
     // 오디오 태그 하나 재생하면 다른것들은 정지하게 만들기
     // audio태그를 작동시킬 때 뭐라고 써야할지부터 찾아야했고(.change 안됨, .play 안됨. on("play" 하니까 된다)), 지금 조작한 audio태그 외의 것들을 어떻게 조작할지도 찾느라 힘들었다.
@@ -345,6 +306,7 @@
                 elem.pause();   // .play(): 미디어 파일 재생, .pause(): 미디어 파일 일시정지
         });
     });
+    
     </script>  
 </body>
 </html>
