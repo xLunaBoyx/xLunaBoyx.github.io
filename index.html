@@ -124,6 +124,7 @@
         float:left;
     } */
 
+    /* 화면 4등분한 각 메뉴판의 설정. 폭은 화면의 25%, 높이는 아래 설명, 중앙정렬 */
     .menu {
         position: relative;
         width: 25%;
@@ -134,40 +135,59 @@
         justify-content: center;
         align-items: center;
     }
+
+    /* 메뉴에 호버해서 위에것들 내려오기 전까지는 대충 메뉴 전체가 링크 범위인데, 내려오면 메뉴 글자만 링크범위가 됐다. position을 relative로 하니까 대충 의도대로 됐다. */
     .menu a {
         position: relative;
         padding: 434px 80px;
         text-decoration: none;
     }
+
+    /* 메뉴에 호버하면 내려오는거. overflow: hidden 해서 동영상 삐져나가는 걸 잘랐다. */
     .back {
         width: 100%;
         position: absolute;
         overflow: hidden;
         transition-duration: 1s;
     }
+
+    /* 호버링하면 내려오는 이미지나 동영상을 덮는 약간 투명한 까만 판 */
     .black {
         width: 100%;
         position: absolute;
         background-color: rgba(0, 0, 0, 0.11);
         top: 0;
     }
+
+    /* 내려오는 동영상. top 0 해서 위에 딱 붙이고 z-index: 1로 해서 까만 판 위로 올라오도록 했다.  */
     .back video {
         top: 0;
         position: absolute;
         height: 700px;
         z-index: 1;
     }
-    .back img {
+
+    /* aboutme와 signup 이미지를 하나로 제어했는데, 그렇게 하니까 aboutme 이미지에 비해 signup 이미지가 너무 내려와서 따로 했다. */
+    .aboutme img {
         position: absolute;
         top: 250px;
         width: 400px;
     }
+    .signup img {
+        position: absolute;
+        top: 170px;
+        width: 400px;
+    }
+
+    /* 각 메뉴에 적힌 글자. 호버하면 조금 내려가고 흰색으로 변함 */
     .menu:hover .bigText {
         position: relative;
         transform: translateY(350px);
         color: white;
         transition-duration: 1s;
     }
+
+    /* 호버하면 위에서 .back이 내려오는건데, 다 해놓고 보니까 호버하기 전일때 .back이 정확히 어디있는건지 모르겠다. top -1080인지 -2160인지... 제대로 되긴 하는데 */
     .menu:hover .back {
         transform: translateY(1080px);
     }
