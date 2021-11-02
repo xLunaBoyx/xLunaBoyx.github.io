@@ -636,7 +636,7 @@ $(document).ready(function() {
         $('.fadein').each( function(i){
             var bottom_of_element = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
-            if(bottom_of_window > bottom_of_element + 100 ){   /* 스크롤 좀 더 했을때 보이게 하려면 어떻게 해야할까 하다가 100px 하면 안돼서 100 해보니까 의도한 대로 됐다. */
+            if(bottom_of_window > bottom_of_element + 220 ){   /* 스크롤 좀 더 했을때 보이게 하려면 어떻게 해야할까 하다가 100px 하면 안돼서 100 해보니까 의도한 대로 됐다. */
                 $(this).animate({'opacity':'1'},1000);
             }
         }); 
